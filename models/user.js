@@ -62,12 +62,12 @@ userSchema.statics.authMiddle = function(req, res, next) {
 };
 
 
-userSchema.method.generateToken = function() {
+userSchema.methods.generateToken = function() {
   var payload = {
     userId: this._id,
     iat: Date.now()
   };
-  var token = jwt.encode(payload, JWT_secret);
+  var token = jwt.encode(payload, JWT_SECRET);
   return token;
 }
 
