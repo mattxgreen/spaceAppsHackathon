@@ -1,15 +1,25 @@
-"use strict";
+(function() {
+  "use strict";
 
-var app = angular.module("myApp", ["ui.router"]);
+  angular
+    .module("myApp", ["ui.router"])
+    .config(configFunction);
 
-app.config(function($stateProvider, $urlRouterProvider) {
+    configFunction.$inject = ['$stateProvider', '$urlRouterProvider']
 
-  $stateProvider
-    .state("home", {
-      url: "/",
-      templateUrl: "/html/home.html",
-      controller: "homeCtrl"
-    })
+    function configFunction($stateProvider, $urlRouterProvider) {
+      $stateProvider
+        .state("home", {
+          url: "/",
+          templateUrl: "/html/home.html",
+          controller: "homeCtrl"
+        })
+        .state("map", {
+          url: "/map",
+          templateUrl: "/html/map.html",
+          controller: "mapCtrl"
+        })
 
-  $urlRouterProvider.otherwise("/");
-})
+      $urlRouterProvider.otherwise("/");
+    }
+})();
