@@ -15,7 +15,6 @@ angular
       $scope.user.loc.index = '2dsphere'
 
       SnapshotService.send($scope.user)
-      $state.go('map')
       .then(function(res) {
         console.log('res', res);
         // $state.go('map');

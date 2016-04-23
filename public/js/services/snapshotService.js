@@ -10,8 +10,11 @@
     function SnapshotService ($http) {
       this.send = function(user) {
         console.log(user);
-        // return true;
-        return $http.post('http://8d7aa83a.ngrok.io/api', user);
+        return $.ajax({
+          method: 'POST',
+          url : 'https://d645291f.ngrok.io/api',
+          data: user
+        })
       }
     }
 
