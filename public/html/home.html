@@ -1,3 +1,34 @@
 <div class="container">
   <h1>Home</h1>
+  <div>
+  <input ng-model='input.lat' placeholder='lat'>
+</div>
+<div>
+  <input ng-model='input.long' placeholder='long'>
+</div>
+<div>
+  <label>Cough</label>
+  <input ng-model='user.cough' type='number'>
+</div>
+<div>
+  <label>Shortness of Breath</label>
+  <input ng-model='user.short' type='number'>
+</div>
+<div>
+  <label>Wheezing</label>
+  <input ng-model='user.wheezing' type='number'>
+</div>
+<div>
+  <label>Sneezing</label>
+  <input ng-model='user.sneezing' type='number'>
+</div>
+<div>
+  <label>Nobstruction</label>
+  <input ng-model='user.nobstruction' type='number'>
+</div>
+<div>
+  <label>Itchy</label>
+  <input ng-model='user.ichy' type='number'>
+</div>
+  <button ng-click='addSnapshot()'>Add</button>
 </div>
