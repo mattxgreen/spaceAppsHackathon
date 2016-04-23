@@ -11,9 +11,7 @@ router.get('/', function(req, res) {
 });
 
 router.post('/', function(req, res) {
-  User.find({}, function(err, users) {
-    res.status(err ? 400 : 200).send(err || users);
-  })
+  // User.create()
 });
 
 

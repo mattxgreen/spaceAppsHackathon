@@ -9,8 +9,9 @@ const JWT_SECRET = 'secret';
 var User;
 var userSchema = new mongoose.Schema({
 
-  username: { type: String, unique: true, required: true },
-  password: { type: String, required: true }
+  // username: { type: String, unique: true, required: true },
+  // password: { type: String, required: true }
+  snapshots: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Snapshots' } ]
 
 });
 
