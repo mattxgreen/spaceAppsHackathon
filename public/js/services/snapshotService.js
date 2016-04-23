@@ -3,17 +3,35 @@
 
   angular
     .module("myApp")
-    .service("SnapshotService", SnapshotService)
+    .factory("SnapshotService", SnapshotService)
 
     SnapshotService.$inject = ['$http'];
 
     function SnapshotService ($http) {
-      this.send = function(user) {
+			
+			var service = {
+				send: send,
+				getAll: getAll
+			};
+			
+			return service;
+			
+			/////////
+			
+      function send(user) {
         console.log(user);
         return $.ajax({
           method: 'POST',
           url : 'https://d645291f.ngrok.io/api',
           data: user
+        })
+      }
+			
+      function getAll(user) {
+        console.log(user);
+        return $.ajax({
+          method: 'GET',
+          url : 'https://d645291f.ngrok.io/api'
         })
       }
     }
