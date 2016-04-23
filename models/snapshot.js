@@ -15,7 +15,7 @@ var snapshotSchema = new mongoose.Schema({
   	sneezing: Number,
   	nobstruction: Number,
   	ichy: Number,
-  	createdAt: { type: Date, default: Date.now },
+  	createdAt: { type: Date, default: Date.now }
 
   //INPUT SYM
 
