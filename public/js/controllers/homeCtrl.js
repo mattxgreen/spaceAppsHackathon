@@ -23,7 +23,7 @@ angular
       SnapshotService.send($scope.user)
       .then(function(res) {
         console.log('res', res);
-        //  $state.go('map');
+         $state.go('map');
       }, function(err) {
         console.log('err', err);
       })
