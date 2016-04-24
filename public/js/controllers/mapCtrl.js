@@ -5,9 +5,9 @@ angular
   .module("myApp")
   .controller("mapCtrl", mapCtrl);
 
-  mapCtrl.$inject = ['$scope']
+  mapCtrl.$inject = ['$scope', 'SnapshotService']
 
-  function mapCtrl($scope) {
-
+  function mapCtrl($scope, SnapshotService) {
+		SnapshotService.getAll();
   }
 })();
