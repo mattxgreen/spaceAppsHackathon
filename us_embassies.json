@@ -1,0 +1,86 @@
+[
+    {
+        "city": "New Delhi",
+        "latitude": 28.1446494,
+        "longitude": 76.800269,
+        "aqi": 186
+    },
+    {
+        "city": "Chennai",
+        "latitude": 13.0523591,
+        "longitude": 80.2497404,
+        "aqi": 86
+    },
+    {
+        "city": "Kolkata",
+        "latitude": 22.5564872,
+        "longitude": 88.3039166,
+        "aqi": 92
+    },
+    {
+        "city": "Mumbai",
+        "latitude": 19.0650346,
+        "longitude": 72.8661537,
+        "aqi": 78
+    },
+    {
+        "city": "Hyderabad",
+        "latitude": 17.441413,
+        "longitude": 78.4717999,
+        "aqi": 167
+    },
+    {
+        "city": "Jakarta Central",
+        "latitude": -6.1195886,
+        "longitude": 105.918164,
+        "aqi": 115
+    },
+    {
+        "city": "Jakarta South",
+        "latitude": -6.2164643,
+        "longitude": 106.7626762,
+        "aqi": 121
+    },
+    {
+        "city": "Ulaanbaatar",
+        "latitude": 47.9282319,
+        "longitude": 106.928,
+        "aqi": 64
+    },
+    {
+        "city": "Ho Chi Minh City",
+        "latitude": 10.7792645,
+        "longitude": 106.6982635,
+        "aqi": 77
+    },
+    {
+        "city": "Hanoi",
+        "latitude": 21.0215113,
+        "longitude":105.8166861,
+        "aqi": 85
+    },
+    {
+        "city": "Bogota",
+        "latitude": 4.6639027,
+        "longitude": -74.1106912,
+        "aqi": 10
+    },
+    {
+        "city": "Lima",
+        "latitude": -14.352346,
+        "longitude": -76.5792358,
+        "aqi": 87
+    },
+    {
+        "city": "Dhaka",
+        "latitude": 23.6848695,
+        "longitude": 90.3740649,
+        "aqi": 94
+    },
+    {
+        "city": "Pristina",
+        "latitude": 42.6599271,
+        "longitude": 21.1490132,
+        "aqi": 57
+    }
+]
