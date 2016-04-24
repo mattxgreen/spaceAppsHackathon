@@ -41,19 +41,59 @@ router.post('/', function(req, res, next) {
 
 
 
-router.get('/geo/:loc', function(req, res, next){
+//*******************************************************************
+//********************Corellations***********************************
+//*******************************************************************
+
+router.get('/cough', function(req, res, next){
 	Snapshot.find({})
 		.exec(function(err, snapshots){
-
-		})
-})
-
-
-
+			if(err) return res.status(400).send(err);
+			res.send(snapshots);
+		});
+});
 
 
+router.get('/short', function(req, res, next){
+	Snapshot.find({})
+		.exec(function(err, snapshots){
+			if(err) return res.status(400).send(err);
+			res.send(snapshots);
+		});
+});
+
+router.get('/wheezing', function(req, res, next){
+	Snapshot.find({})
+		.exec(function(err, snapshots){
+			if(err) return res.status(400).send(err);
+			res.send(snapshots);
+		});
+});
 
 
+router.get('/nobstruction', function(req, res, next){
+	Snapshot.find({})
+		.exec(function(err, snapshots){
+			if(err) return res.status(400).send(err);
+			res.send(snapshots);
+		});
+});
+
+router.get('/ichy', function(req, res, next){
+	Snapshot.find({})
+		.exec(function(err, snapshots){
+			if(err) return res.status(400).send(err);
+			res.send(snapshots);
+		});
+});
+
+router.get('/sneezing', function(req, res, next){
+	Snapshot.find({})
+		.exec(function(err, snapshots){
+			if(err) return res.status(400).send(err);
+			res.send(snapshots);
+		});
+});
 
 // Get the Whole Collection
 router.get('/all', function(req, res, next){
