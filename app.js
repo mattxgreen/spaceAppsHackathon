@@ -11,7 +11,7 @@ mongoose.connect(mongoUrl, function(err) {
   if(err) {
     console.log(err);
   } else {
-    console.log(`MongoDB connected to ${mongoUrl}`);
+    console.log('MongoDB connected to ${mongoUrl}');
   }
 });
 

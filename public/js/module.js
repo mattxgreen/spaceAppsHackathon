@@ -2,10 +2,10 @@
   "use strict";
 
   angular
-    .module("myApp", ["ui.router"])
+    .module("myApp", ["ui.router", "rzModule"])
     .config(configFunction);
 
-    configFunction.$inject = ['$stateProvider', '$urlRouterProvider']
+    configFunction.$inject = ['$stateProvider', '$urlRouterProvider'];
 
     function configFunction($stateProvider, $urlRouterProvider) {
       $stateProvider
