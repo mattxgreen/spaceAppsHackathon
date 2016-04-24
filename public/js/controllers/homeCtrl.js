@@ -8,7 +8,14 @@ angular
   homeCtrl.$inject = ['$scope', 'SnapshotService', '$state']
 
   function homeCtrl($scope, SnapshotService, $state) {
-    $scope.user = {};
+    $scope.user = {
+			cough: 1,
+			short: 1,
+			wheezing: 1,
+			sneezing: 1,
+			nobstruction: 1,
+			itchy: 1
+		};
 
     navigator.geolocation.getCurrentPosition(function(position) {
       console.log(position);
