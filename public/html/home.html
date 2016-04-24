@@ -1,73 +1,15 @@
-<div class='home'>
-  <div class='container'>
-    <div class='inputs'>
-      <div class='row'>
-        <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-          <h3>Cough</h3>
-          <label class="radio-inline"><input type="radio" name="cough" ng-model='user.cough' value='1'>1</label>
-          <label class="radio-inline"><input type="radio" name="cough" ng-model='user.cough' value='2'>2</label>
-          <label class="radio-inline"><input type="radio" name="cough" ng-model='user.cough' value='3'>3</label>
-          <label class="radio-inline"><input type="radio" name="cough" ng-model='user.cough' value='4'>4</label>
-          <label class="radio-inline"><input type="radio" name="cough" ng-model='user.cough' value='5'>5</label>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-          <h3>Shortness of Breath</h3>
-          <label class="radio-inline"><input type="radio" name="short" ng-model='user.short' value='1'>1</label>
-          <label class="radio-inline"><input type="radio" name="short" ng-model='user.short' value='2'>2</label>
-          <label class="radio-inline"><input type="radio" name="short" ng-model='user.short' value='3'>3</label>
-          <label class="radio-inline"><input type="radio" name="short" ng-model='user.short' value='4'>4</label>
-          <label class="radio-inline"><input type="radio" name="short" ng-model='user.short' value='5'>5</label>
-      </div>
+<div class='container'>
+  <h1 class='header text-center'>Data</h1>
 
-      <div class='row'>
-        <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-          <h3>Wheezing</h3>
-          <label class="radio-inline"><input type="radio" name="wheez" ng-model='user.wheezing' value='1'>1</label>
-          <label class="radio-inline"><input type="radio" name="wheez" ng-model='user.wheezing' value='2'>2</label>
-          <label class="radio-inline"><input type="radio" name="wheez" ng-model='user.wheezing' value='3'>3</label>
-          <label class="radio-inline"><input type="radio" name="wheez" ng-model='user.wheezing' value='4'>4</label>
-          <label class="radio-inline"><input type="radio" name="wheez" ng-model='user.wheezing' value='5'>5</label>
-        </div>
-      </div>
+<div class='row'>
+<div class='graph col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3' id='map'></div>
+</div>
 
-      <div class='row'>
-        <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-          <h3>Sneezing</h3>
-          <label class="radio-inline"><input type="radio" name="sneez" ng-model='user.sneezing' value='1'>1</label>
-          <label class="radio-inline"><input type="radio" name="sneez" ng-model='user.sneezing' value='2'>2</label>
-          <label class="radio-inline"><input type="radio" name="sneez" ng-model='user.sneezing' value='3'>3</label>
-          <label class="radio-inline"><input type="radio" name="sneez" ng-model='user.sneezing' value='4'>4</label>
-          <label class="radio-inline"><input type="radio" name="sneez" ng-model='user.sneezing' value='5'>5</label>
-        </div>
-      </div>
+<div class='text-center'>
+  <button class='btn btn-success' ui-sref='input'>Input Your Health</button>
+</div>
 
-      <div class='row'>
-        <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-          <h3>Nasal Obstruction</h3>
-          <label class="radio-inline"><input type="radio" name="nob" ng-model='user.nobstruction' value='1'>1</label>
-          <label class="radio-inline"><input type="radio" name="nob" ng-model='user.nobstruction' value='2'>2</label>
-          <label class="radio-inline"><input type="radio" name="nob" ng-model='user.nobstruction' value='3'>3</label>
-          <label class="radio-inline"><input type="radio" name="nob" ng-model='user.nobstruction' value='4'>4</label>
-          <label class="radio-inline"><input type="radio" name="nob" ng-model='user.nobstruction' value='5'>5</label>
-      </div>
-    </div>
-
-      <div class='row'>
-        <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-          <h3>Itchy</h3>
-          <label class="radio-inline"><input type="radio" name="itchy" ng-model='user.itchy' value='1'>1</label>
-          <label class="radio-inline"><input type="radio" name="itchy" ng-model='user.itchy' value='2'>2</label>
-          <label class="radio-inline"><input type="radio" name="itchy" ng-model='user.itchy' value='3'>3</label>
-          <label class="radio-inline"><input type="radio" name="itchy" ng-model='user.itchy' value='4'>4</label>
-          <label class="radio-inline"><input type="radio" name="itchy" ng-model='user.itchy' value='5'>5</label>
-        </div>
-      </div>
-      <div class='text-center'>
-        <button ng-click='addSnapshot()' class='btn btn-success align-center'>Add</button>
-      </div>
-    </div>
-
-  </div>
+<div class='row'>
+<div class='graph col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3'></div>
+</div>
 </div>
