@@ -47,7 +47,6 @@
       });
 
       request.done(function(response){
-        console.log('response: ', response);
         var coords = [];
 
         response.forEach(function(set){

@@ -18,17 +18,14 @@ angular
 		};
 
     navigator.geolocation.getCurrentPosition(function(position) {
-      console.log(position);
       $scope.user.lat = position.coords.latitude.toFixed(2);
       $scope.user.lon = position.coords.longitude.toFixed(2);
     });
 
     $scope.addSnapshot = function() {
       if($scope.user) {
-        console.log($scope.user);
         SnapshotService.send($scope.user)
         .then(function(res) {
-          console.log('res', res);
           $state.go('home');
         }, function(err) {
           console.log('err', err);
