@@ -8,13 +8,17 @@ var Snapshot;
 var snapshotSchema = new mongoose.Schema({
 	
 	// userid: String,
-  	loc: { type: [Number], index: '2dsphere'},
-  	cough: Number,
-  	short: Number,
-  	wheezing: Number,
-  	sneezing: Number,
-  	nobstruction: Number,
-  	ichy: Number,
+  	// loc: { type: [Number], index: '2dsphere'},
+  	lat: String,
+  	lon: String,
+  	cough: String,
+  	short: String,
+  	wheezing: String,
+  	sneezing: String,
+  	nobstruction: String,
+  	ichy: String,
+  	api: [],
+  	airNowData: Boolean,
   	createdAt: { type: Date, default: Date.now }
 
   //INPUT SYM
