@@ -17,17 +17,18 @@ angular
     })
 
     $scope.addSnapshot = function() {
-
+      if($scope.user) {
+        console.log($scope.user);
+        SnapshotService.send($scope.user)
+        .then(function(res) {
+          console.log('res', res);
+          $state.go('map');
+        }, function(err) {
+          console.log('err', err);
+        })
+      }
+      }
       // console.log($scope.user);
-
-      SnapshotService.send($scope.user)
-      .then(function(res) {
-        console.log('res', res);
-         $state.go('map');
-      }, function(err) {
-        console.log('err', err);
-      })
-    }
 
     $scope.something = function() {
       console.log($scope.test);
