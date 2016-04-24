@@ -8,12 +8,12 @@
     mapCtrl.$inject = ['$scope', 'SnapshotService']
 
     function mapCtrl($scope, SnapshotService) {
-    	SnapshotService.getAll()
-      .then(function(res) {
-        console.log('res', res);
-      }, function(err) {
-        console.log('err', err);
-      })
+    	// SnapshotService.getAll()
+      // .then(function(res) {
+      //   console.log('res', res);
+      // }, function(err) {
+      //   console.log('err', err);
+      // })
 
 
 

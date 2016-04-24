@@ -4,12 +4,13 @@
 }
 body {
   font-family:"Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('/images/citybackground.jpg');
+
 }
 
 .home {
   height: 100vh;
   width: 100%;
-  background-image: url('/images/citybackground.jpg');
   position: fixed;
 }
 
@@ -22,4 +23,15 @@ body {
 
 .btn {
   margin: 20px;
+}
+
+.header {
+  color: white;
+}
+
+.graph {
+  background-color: #fff;
+  border-radius: 5px;
+  height: 270px;
+  margin-top: 25px;
 }
