@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- line not necessary -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=API_KEY_GOES_HERE&callback=initMap"
+  async defer></script>
+</head>
+<body>
+  <div id="map"></div>
+  <script>
+    var map;
+    function initMap() {
+      var request = $.ajax({
+        url: '/locations', //this route needs to return a json string with a objects that have 'latitude'
+                           //and 'longitude' properties. It's okay if they have other irrelevant properties.
+        type: 'GET',
+        datatype: 'json'
+      });
+
+      request.done(function(response){
+        var latitude = response;
+        data = JSON.parse(response);
+        coords = [];
+
+        data.forEach(function(set){
+          coords.push([set.latitude, set.longitude]);
+        });
+
+        var infowindow = new google.maps.InfoWindow();
+        var marker;
+
+        for (i = 0; i < coords.length; i++) {
+          marker = new google.maps.Marker({
+            position: new google.maps.LatLng(coords[i][0], coords[i][1]),
+            map: map
+          });
+        }
+
+      });
+
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: 37.144, lng: -39.967}, //arbitrary middle of world.  We could make this the user's location.
+        zoom: 1
+      });
+
+      var getTileUrl = function(tile, zoom) {
+        return "//map1.vis.earthdata.nasa.gov/wmts-webmerc/" +
+               "MODIS_Terra_Aerosol/default/2013-12-02/" +
+               "GoogleMapsCompatible_Level6/" +
+                zoom + "/" + tile.y + "/" +
+                tile.x + ".png";
+      };
+
+        var layerOptions = {
+          alt: "MODIS_Terra_Aerosol",
+          getTileUrl: getTileUrl,
+          maxZoom: 6,
+          minZoom: 1,
+          name: "MODIS_Terra_Aerosol",
+          tileSize: new google.maps.Size(256, 256),
+          opacity: 0.5
+        };
+
+        var imageMapType = new google.maps.ImageMapType(layerOptions);
+        map.overlayMapTypes.insertAt(0, imageMapType);
+    }
+  </script>
+</body>
+</html>
