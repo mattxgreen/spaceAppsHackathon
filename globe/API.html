@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get API Data</title>
+    <script src="globe/jquery.js"></script>
+    <script src="globe/globe.js"></script>
+    <script src="globe/third-party/Detector.js"></script>
+    <script src="globe/third-party/three.min.js"></script>
+    <script src="globe/third-party/Tween.js"></script>
+</head>
+<body>
+
+    <h1 style="color:red"> DO NOT CLICK THIS     <button id="button"><h1 style="color:red">BUTTON</h1></button>
+        UNLESS YOU KNOW EXACTLY WHAT YOU ARE DOING!</h1>
+
+
+<script>
+
+
+
+
+    var USCities_file_name = "data/USCities.json";
+    var USCities ="";
+
+    AIRQuality_file_name = "data/AIRQuality.json";
+    requested_year = 2013;
+
+
+    $('#button').click(function(){
+        getJSONData(
+                function(result){
+                    alert("retrieving JSON successful");
+                    USCities = JSON.parse(result);
+                    manageUSCities(USCities,requested_year);
+                },
+                function(error){
+                    alert("Retrieving JSON Failed");
+                    console.log(error);
+                },
+                USCities_file_name
+        );
+    });
+
+
+
+    function makeAPIRequest(successCallbackFunction, failureCallbackFunction,lat,long,year){
+        $.ajax({
+            'url': "http://www.airnowapi.org/aq/observation/latLong/historical/?format=application/json&latitude="+lat+"&longitude="+long+"&date="+year+"-04-22T00-0000&distance=25&API_KEY=9374F3CF-F63A-4EF6-93A3-68902DDC3F98",
+            'type':'GET',
+            'contentType':'application/json',
+            success: function(result){
+                successCallbackFunction(result);
+            },
+            error: function(xhr,status,error){
+                failureCallbackFunction(error);
+            }
+        });
+        return false;
+    }
+
+
+    function getJSONData(successCallbackFunction,failureCallbackFunction,filename){
+        $.ajax({
+            'url': filename,
+            'type':'GET',
+            'contentType':'application/json',
+            success: function(result){
+                successCallbackFunction(result);
+            },
+            error: function(xhr,status,error){
+                failureCallbackFunction(error);
+            }
+        });
+        return false;
+    }
+
+    var JSONdata= {"data":[]};
+
+    function manageUSCities(USCities,requested_year){
+        for (var i =125; i<200;i++){
+            makeAPIRequest(
+                    function(result){
+                        parsedResult = JSON.parse(result);
+                        console.log(result);
+                        if ( (typeof parsedResult !== 'undefined') && (parsedResult[0] !== undefined) && (parsedResult[0] !== null) ) {
+                            // the variable is defined
+                            JSONdata.data.push({
+                                        lat: parsedResult[0].Latitude,
+                                        long: parsedResult[0].Longitude,
+                                        AQI: (parsedResult[0].AQI/250)
+                                    }
+                            );
+                        }
+                        else{
+                            console.log("Found undefined");
+                        }
+                    },
+                    function(error){
+                        console.log("Failure: "+error);
+                    },
+                    USCities[i].latitude,
+                    USCities[i].longitude,
+                    requested_year
+            );
+        }
+
+        setTimeout(function(){
+            text =JSON.stringify(JSONdata);
+            document.write('<p id="test">'+text+'</p>');
+        },5000);
+        console.log(JSONdata);
+    }
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
