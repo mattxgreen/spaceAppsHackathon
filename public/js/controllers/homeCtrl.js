@@ -113,9 +113,11 @@
             shapes = ['circle'],
             random = d3.random.normal();
 
+        var symptoms = ['Cough', 'Shortness of Breath', 'Wheezing', 'Sneezing']
+
         for (var i = 0; i < groups; i++) {
             data.push({
-                key: 'Group ' + i,
+                key: symptoms[i],
                 values: []
             });
 
