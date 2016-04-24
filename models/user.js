@@ -8,14 +8,18 @@ const JWT_SECRET = 'secret';
 
 var User;
 var userSchema = new mongoose.Schema({
-
-  // username: { type: String, unique: true, required: true },
-  // password: { type: String, required: true }
-  snapshots: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Snapshots' } ],
-  createdAt: { type: Date, default: Date.now }
+	snapshots: [ { type: mongoose.Schema.Types.ObjectId, ref: 'Snapshots' } ],
+	createdAt: { type: Date, default: Date.now }
+	//Disabled for Demo Auth
+	// username: { type: String, unique: true, required: true },
+	// password: { type: String, required: true }
 });
 
+//************************************************************
+//********************User Auth MiddleWare********************
+//************************************************************
 
+//Disabled for Demo
 
 // userSchema.statics.register = function(userObj, cb) {
 //   bcrypt.hash(userObj.password, 13, function(err, hash) {
@@ -33,7 +37,6 @@ var userSchema = new mongoose.Schema({
 //     });
 //   });
 // };
-
 // userSchema.statics.authenticate = function(userObj, cb) {
 //   User.findOne({username: userObj.username}, function(err, dbUser) {
 //     if(err || !dbUser) return cb("Authentication failed");
@@ -44,8 +47,6 @@ var userSchema = new mongoose.Schema({
 //     });
 //   });
 // };
-
-
 // userSchema.statics.authMiddle = function(req, res, next) {
 //   var token = req.cookies.usercookie;
 //   try {
@@ -61,8 +62,6 @@ var userSchema = new mongoose.Schema({
 //     next();
 //   });
 // };
-
-
 // userSchema.methods.generateToken = function() {
 //   var payload = {
 //     userId: this._id,
@@ -76,6 +75,3 @@ var userSchema = new mongoose.Schema({
 
 User = mongoose.model("User", userSchema);
 module.exports = User;
-
-
-//

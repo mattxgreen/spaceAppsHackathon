@@ -16,6 +16,7 @@ router.get('/', function(req, res, next) {
 
 // Add new Snapshot
 router.post('/', function(req, res, next) {
+	console.log(req.body);
 	var snap = req.body;
 	var lat = snap.lat;
   	var lon = snap.lon;
@@ -100,6 +101,23 @@ router.get('/all', function(req, res, next){
 	Snapshot.find({})
 		.exec(function(err, snapshots){
 			if(err) return res.status(400).send(err);
+
+			// User Input Commented for Demo
+			// var responseArr = snapshots.map((e) =>{
+			// 	var resObj = {
+			// 		lat: e.lat,
+			// 		lon: e.lon,
+			// 		cough: e.cough,
+			// 	  	short: e.short,
+			// 	  	wheezing: e.wheezing,
+			// 	  	sneezing: e.sneezing,
+			// 	  	nobstruction: e.nobstruction,
+			// 	  	ichy: e.ichy,
+			// 	  	aqi1: e.api[0].AQI,
+			// 	  	// aqi2: e.api[1].AQI
+			// 	}
+			// 	return resObj
+			// });
 			res.send(snapshots);
 		});
 });

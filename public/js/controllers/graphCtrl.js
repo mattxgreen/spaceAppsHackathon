@@ -66,7 +66,7 @@
                     var num = Math.abs(Math.floor(random()*2));
                     data[i].values.push({
                         x: num
-                        , y: num*20 + random()*20
+                        , y: num*20 + random()*20 + 50
                         , size: Math.random()
                         , shape: shapes[j % 6]
                     });
