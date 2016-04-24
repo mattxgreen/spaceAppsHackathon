@@ -34,12 +34,6 @@ angular
     };
 
     $scope.slider = {
-      coughSlider: 1,
-      itchy:1,
-      obstruction:1,
-      sneezing:1,
-      wheezing:1,
-      shortness:1,
       options: {
         floor: 1,
         ceil: 5,
