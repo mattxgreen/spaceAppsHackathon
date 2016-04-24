@@ -15,8 +15,19 @@ body {
   padding: 30px;
 }
 
-.home {
+.graph-wrapper {
   width: 100%;
+}
+
+.graph {
+  width: 100%;
+  height: auto;
+}
+
+.home {
+  /*width: 100%;*/
+  /*height: 100vh;*/
+  background-color: rgba(255, 255, 255, .5);
 }
 .inputs {
   margin-top: 50px;
