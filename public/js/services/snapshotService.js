@@ -13,10 +13,7 @@
 				send: send,
 				getAll: getAll
 			};
-
 			return service;
-
-			/////////
 
       function send(user) {
         return $.ajax({
@@ -25,7 +22,6 @@
           data: user
         })
       }
-
       function getAll() {
         return $.ajax({
           method: 'GET',
