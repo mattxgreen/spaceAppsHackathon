@@ -2,7 +2,7 @@
   "use strict";
 
   angular
-    .module("myApp", ["ui.router"])
+    .module("myApp", ["ui.router", "nvd3"])
     .config(configFunction);
 
     configFunction.$inject = ['$stateProvider', '$urlRouterProvider']
@@ -18,6 +18,11 @@
           url: "/map",
           templateUrl: "/html/map.html",
           controller: "mapCtrl"
+        })
+        .state("graph", {
+          url: "/graph",
+          templateUrl: "/html/graph.html",
+          controller: "graphCtrl"
         })
 
       $urlRouterProvider.otherwise("/");
