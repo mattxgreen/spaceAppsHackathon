@@ -1,20 +1,18 @@
 <div class='home'>
-
     <div class='container'>
         <h1 class='header text-center'>Prism</h1>
-
-        <div class='row'>
-            <div class='graph col-xs-12 col-sm-6 col-sm-offset-3' id='map'></div>
+        <div class="row">
+            <div class="full-opacity map col-xs-12 col-sm-6 col-sm-offset-3" id="map"></div>
         </div>
 
-        <div class='text-center'>
+        <div class='row text-center'>
             <button class='btn btn-success' ui-sref='input'>Input Your Health</button>
         </div>
 
-        <div class='row graph-wrapper'>
-            <!-- <div class='graph col-xs-12 col-sm-6 col-sm-offset-3'> -->
-            <nvd3 options="options" data="data" class='graph'></nvd3>
-            <!-- </div> -->
+        <div class='row'>
+            <div class='col-xs-12 col-sm-6 col-sm-offset-3'>
+                <nvd3 options="options" data="data" class='full-opacity graph'></nvd3>
+            </div>
         </div>
     </div>
     <div class='home'>

@@ -1,60 +1,65 @@
-  <div class='container'>
+<div class='container'>
     <div class='inputs'>
-      <div class='row'>
-        <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-          <h3>Cough</h3>
-          <div class='slider'>
-            <rzslider rz-slider-model="user.cough" rz-slider-options="slider.options"></rzslider>
-          </div>
+        <div class='row'>
+            <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
+                <h3>Cough</h3>
+
+                <div class='slider'>
+                    <rzslider rz-slider-model="user.cough" rz-slider-options="slider.options"></rzslider>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class='row'>
-        <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-          <h3>Shortness of Breath</h3>
-          <div class='slider'>
-            <rzslider rz-slider-model="user.short" rz-slider-options="slider.options"></rzslider>
-          </div>
+        <div class='row'>
+            <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
+                <h3>Shortness of Breath</h3>
+
+                <div class='slider'>
+                    <rzslider rz-slider-model="user.short" rz-slider-options="slider.options"></rzslider>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
+                <h3>Wheezing</h3>
+
+                <div class='slider'>
+                    <rzslider rz-slider-model="user.wheezing" rz-slider-options="slider.options"></rzslider>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
+                <h3>Sneezing</h3>
+
+                <div class='slider'>
+                    <rzslider rz-slider-model="user.sneezing" rz-slider-options="slider.options"></rzslider>
+                </div>
+            </div>
         </div>
 
         <div class='row'>
-          <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-            <h3>Wheezing</h3>
-            <div class='slider'>
-              <rzslider rz-slider-model="user.wheezing" rz-slider-options="slider.options"></rzslider>
+            <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
+                <h3>Nasal Obstruction</h3>
+
+                <div class='slider'>
+                    <rzslider rz-slider-model="user.nobstruction" rz-slider-options="slider.options"></rzslider>
+                </div>
             </div>
-          </div>
         </div>
 
         <div class='row'>
-          <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-            <h3>Sneezing</h3>
-            <div class='slider'>
-              <rzslider rz-slider-model="user.sneezing" rz-slider-options="slider.options"></rzslider>
-            </div>
-          </div>
-        </div>
+            <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
+                <h3>Itchy</h3>
 
-        <div class='row'>
-          <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-            <h3>Nasal Obstruction</h3>
-            <div class='slider'>
-              <rzslider rz-slider-model="user.nobstruction" rz-slider-options="slider.options"></rzslider>
+                <div class='slider'>
+                    <rzslider rz-slider-model="user.itchy" rz-slider-options="slider.options"></rzslider>
+                </div>
             </div>
-          </div>
-        </div>
-
-        <div class='row'>
-          <div class='input-group col-xs-12 col-sm-6 col-sm-offset-3'>
-            <h3>Itchy</h3>
-            <div class='slider'>
-              <rzslider rz-slider-model="user.itchy" rz-slider-options="slider.options"></rzslider>
-            </div>
-          </div>
         </div>
         <div class='text-center'>
-          <button ng-click='addSnapshot()' class='btn btn-success align-center'>Add</button>
-          <button class='btn btn-danger' ui-sref='home'>Cancel</button>
+            <button class='btn btn-danger' ui-sref='home'>Cancel</button>
+            <button ng-click='addSnapshot()' class='btn btn-success align-center'>Add</button>
         </div>
-      </div>
-
     </div>
+
+</div>
