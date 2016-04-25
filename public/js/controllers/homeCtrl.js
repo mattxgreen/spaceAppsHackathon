@@ -5,7 +5,7 @@
     .module("myApp")
     .controller("homeCtrl", homeCtrl);
 
-  homeCtrl.$inject = ['$scope', 'SnapshotService', '$window', 'GraphService']
+  homeCtrl.$inject = ['$scope', 'SnapshotService', '$window', 'GraphService'];
 
   function homeCtrl($scope, SnapshotService, $window, GraphService) {
 
@@ -133,8 +133,5 @@
         }
         return data;
     }
-
-
-
   }
 })();

@@ -5,7 +5,7 @@
       .module("myApp")
       .controller("graphCtrl", graphCtrl);
 
-    graphCtrl.$inject = ['$scope']
+    graphCtrl.$inject = ['$scope'];
 
     function graphCtrl($scope) {
 

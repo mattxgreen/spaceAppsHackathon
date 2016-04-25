@@ -3,7 +3,7 @@
 
   angular
     .module("myApp", ["ui.router", "nvd3", "rzModule"])
-    .config(configFunction)
+    .config(configFunction);
     // .config(mapsConsfig)
 
     configFunction.$inject = ['$stateProvider', '$urlRouterProvider'];
