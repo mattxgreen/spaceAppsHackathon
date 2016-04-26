@@ -5,7 +5,7 @@ angular
   .module("myApp")
   .controller("inputCtrl", inputCtrl);
 
-  inputCtrl.$inject = ['$scope', 'SnapshotService', '$state']
+  inputCtrl.$inject = ['$scope', 'SnapshotService', '$state'];
 
   function inputCtrl($scope, SnapshotService, $state) {
     var vm = this;
@@ -72,8 +72,6 @@ angular
         }
       }
       // console.log($scope.user);
-
-
   }
   
 })();
