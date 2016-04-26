@@ -6,7 +6,7 @@
                 <h3>Cough</h3>
 
                 <div class='slider'>
-                    <rzslider rz-slider-model="user.cough" rz-slider-options="slider.options"></rzslider>
+                    <rzslider rz-slider-model="vm.user.cough" rz-slider-options="vm.slider.options"></rzslider>
                 </div>
             </div>
         </div>
@@ -15,7 +15,7 @@
                 <h3>Shortness of Breath</h3>
 
                 <div class='slider'>
-                    <rzslider rz-slider-model="user.short" rz-slider-options="slider.options"></rzslider>
+                    <rzslider rz-slider-model="vm.user.short" rz-slider-options="vm.slider.options"></rzslider>
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 <h3>Wheezing</h3>
 
                 <div class='slider'>
-                    <rzslider rz-slider-model="user.wheezing" rz-slider-options="slider.options"></rzslider>
+                    <rzslider rz-slider-model="vm.user.wheezing" rz-slider-options="vm.slider.options"></rzslider>
                 </div>
             </div>
         </div>
@@ -33,7 +33,7 @@
                 <h3>Sneezing</h3>
 
                 <div class='slider'>
-                    <rzslider rz-slider-model="user.sneezing" rz-slider-options="slider.options"></rzslider>
+                    <rzslider rz-slider-model="vm.user.sneezing" rz-slider-options="vm.slider.options"></rzslider>
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
                 <h3>Nasal Obstruction</h3>
 
                 <div class='slider'>
-                    <rzslider rz-slider-model="user.nobstruction" rz-slider-options="slider.options"></rzslider>
+                    <rzslider rz-slider-model="vm.user.nobstruction" rz-slider-options="vm.slider.options"></rzslider>
                 </div>
             </div>
         </div>
@@ -53,13 +53,13 @@
                 <h3>Itchy</h3>
 
                 <div class='slider'>
-                    <rzslider rz-slider-model="user.itchy" rz-slider-options="slider.options"></rzslider>
+                    <rzslider rz-slider-model="vm.user.itchy" rz-slider-options="vm.slider.options"></rzslider>
                 </div>
             </div>
         </div>
         <div class='text-center'>
             <button class='btn btn-danger' ui-sref='home'>Cancel</button>
-            <button ng-click='addSnapshot()'  ui-sref='home' class='btn btn-success align-center'>Add</button>
+            <button ng-click='vm.addSnapshot()'  ui-sref='home' class='btn btn-success align-center'>Add</button>
         </div>
     </div>
 
