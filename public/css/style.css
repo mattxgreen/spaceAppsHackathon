@@ -1,34 +1,34 @@
+/**------------------------------------------------------------------
+[Table of Contents]
+* Name of section / Search term
+
+1. Universal styling/ #Universal
+2. Home / #Home
+3. Graph / #Graph
+4. Map / #Map
+5. Input / #Input
+------------------------------------------------------------------**/
+
+/* #Body
+================================ */
 * {
   margin: 0;
   padding: 0;
 }
+
 body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url('/images/citybackground.jpg');
   background-repeat: no-repeat;
-  padding: 70px;
-}
-#map {
-  height: 300px;
+  padding: 80px;
 }
 
 .btn {
   margin: 20px;
 }
 
-.graph {
-width: 100%;
-height: auto;
-background-color: #fff;
-border-radius: 5px;
-/*height: 270px;*/
-margin-top: 25px;
-}
-
-.graph-wrapper {
-  width: 100%;
-}
-
+/* #Home
+================================ */
 .home-header {
   color: black;
 }
@@ -41,15 +41,40 @@ margin-top: 25px;
 /*height: 100vh;*/
 background-color: rgba(255, 255, 255, .5);
 }
+
+/* #Graph
+================================ */
+
+.graph {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  /*height: 270px;*/
+  margin-top: 25px;
+}
+
+.graph-wrapper {
+  width: 100%;
+}
+
+/* #Map
+================================ */
+
+.map-style {
+  border-radius: 5px;
+  height: 300px;
+}
+
+/* #Input
+================================ */
 .inputs {
-margin-top: 50px;
-background-color: rgba(255, 255, 255, .5);
-border-radius: 5px;
-text-align: center;
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 5px;
+  text-align: center;
 }
-.map {
-border-radius: 5px;
-}
+
 .slider {
   padding: 30px;
 }
