@@ -33,15 +33,19 @@ body {
   color: black;
 }
 
-.input-header {
-  color: white;
-}
 .home {
-/*width: 100%;*/
-/*height: 100vh;*/
-background-color: rgba(255, 255, 255, .5);
+  /*width: 100%;*/
+  /*height: 100vh;*/
+  background-color: rgba(255, 255, 255, .5);
 }
 
+.inputs {
+  margin-top: 50px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 5px;
+  text-align: center;
+
+}
 /* #Graph
 ================================ */
 
@@ -68,12 +72,17 @@ background-color: rgba(255, 255, 255, .5);
 
 /* #Input
 ================================ */
+.input-header {
+  color: white;
+}
+
 .inputs {
   margin-top: 50px;
   background-color: rgba(255, 255, 255, .5);
   border-radius: 5px;
   text-align: center;
 }
+  
 
 .slider {
   padding: 30px;
