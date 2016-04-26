@@ -9,6 +9,7 @@ body {
 }
 h3 {
   margin: 10px;
+  margin-bottom: 0;
 }
 #map {
   height: 300px;

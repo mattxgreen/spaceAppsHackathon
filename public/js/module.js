@@ -20,13 +20,14 @@
         .state("input", {
           url: "/input",
           templateUrl: "/html/input.html",
-          controller: "inputCtrl"
+          controller: "inputCtrl",
+          controllerAs: 'vm'
         })
         .state("graph", {
           url: "/graph",
           templateUrl: "/html/graph.html",
           controller: "graphCtrl"
-        })
+        });
 
       $urlRouterProvider.otherwise("/");
     }
