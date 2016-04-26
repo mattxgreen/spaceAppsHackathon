@@ -15,7 +15,8 @@
         .state("home", {
           url: "/",
           templateUrl: "/html/home.html",
-          controller: "homeCtrl"
+          controller: "homeCtrl",
+          controllerAs: 'vm'
         })
         .state("input", {
           url: "/input",
