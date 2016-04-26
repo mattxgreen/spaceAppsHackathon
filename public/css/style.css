@@ -23,6 +23,10 @@ body {
   padding: 80px;
 }
 
+h3 {
+  margin: 10px;
+}
+
 .btn {
   margin: 20px;
 }
@@ -85,5 +89,5 @@ body {
   
 
 .slider {
-  padding: 30px;
+  padding: 10px;
 }

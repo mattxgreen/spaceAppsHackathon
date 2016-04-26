@@ -3,11 +3,11 @@
 
   angular
     .module("myApp")
-    .factory("SnapshotService", SnapshotService)
+    .factory("SnapshotService", SnapshotService);
 
-    SnapshotService.$inject = ['$http'];
+    SnapshotService.$inject = ['$http','PRISM_SERVER'];
 
-    function SnapshotService ($http) {
+    function SnapshotService ($http, PRISM_SERVER) {
 
 			var service = {
 				send: send,
@@ -18,14 +18,14 @@
       function send(user) {
         return $.ajax({
           method: 'POST',
-          url : 'https://7d298d1b.ngrok.io/api',
+          url : PRISM_SERVER+'/api',
           data: user
         })
       }
       function getAll() {
         return $.ajax({
           method: 'GET',
-          url : 'https://7d298d1b.ngrok.io/api/all'
+          url : PRISM_SERVER+'/api/all'
         })
       }
     }

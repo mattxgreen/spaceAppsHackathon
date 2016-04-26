@@ -5,7 +5,7 @@ var User = require("../models/user");
 var Snapshot = require("../models/snapshot");
 var http = require('http');
 var request = require('request');
-var urlBase = 'http://www.airnowapi.org/aq/observation/latLong/current/?format=application/json'
+var urlBase = 'http://www.airnowapi.org/aq/observation/latLong/current/?format=application/json';
 var dist = '&distance=25&API_KEY=' + process.env.API_KEY;
 
 router.get('/', function(req, res, next) {
