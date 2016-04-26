@@ -3,6 +3,7 @@
 
   angular
     .module("myApp", ["ui.router", "nvd3", "rzModule"])
+    .constant('PRISM_SERVER', 'http://localhost:3000')
     .config(configFunction);
     // .config(mapsConsfig)
 
