@@ -7,6 +7,9 @@ body {
   background-image: url('/images/citybackground.jpg');
   background-repeat: no-repeat;
 }
+h3 {
+  margin: 10px;
+}
 #map {
   height: 300px;
 }
@@ -47,5 +50,5 @@ text-align: center;
 border-radius: 5px;
 }
 .slider {
-  padding: 30px;
+  padding: 10px;
 }
