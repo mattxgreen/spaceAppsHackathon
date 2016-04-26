@@ -8,6 +8,7 @@
   homeCtrl.$inject = ['$scope', 'SnapshotService', '$window', 'GraphService'];
 
   function homeCtrl($scope, SnapshotService, $window, GraphService) {
+    var vm = this;
 
     $window.map = new google.maps.Map(document.getElementById('map'), {
       center: {
@@ -56,7 +57,7 @@
         var infowindow = new google.maps.InfoWindow();
         var marker;
 
-        for (let i = 0; i < coords.length; i++) {
+        for (var i = 0; i < coords.length; i++) {
           marker = new google.maps.Marker({
             position: new google.maps.LatLng(coords[i][0], coords[i][1]),
             map: map
@@ -65,7 +66,7 @@
 
       });
     //
-    $scope.options = {
+    vm.options = {
         chart: {
             type: 'scatterChart',
             height: 450,
@@ -105,7 +106,7 @@
         }
     };
 
-    $scope.data = generateData(4,30);
+    vm.data = generateData(4,30);
 
     /* Random Data Generator (took from nvd3.org) */
     function generateData(groups, points) {
