@@ -2,44 +2,86 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prism</title>
-  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <link rel="stylesheet" type="text/css" href="/bower_components/angularjs-slider/dist/rzslider.css"/>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prism</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/bower_components/angularjs-slider/dist/rzslider.css"/>
+    <link rel="stylesheet" href="css/offcanvas.css">
+    <link rel='stylesheet' href='/css/style.css'/>
+    <!-- JQuery -->
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js"
+            integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <!--Bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- Angular -->
+    <script src="/bower_components/angular/angular.js"></script>
+    <!-- Ui-Router -->
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/bower_components/angularjs-slider/dist/rzslider.js"></script>
+    <!-- D3 Libs -->
+    <script src="bower_components/d3/d3.js"></script>
+    <script src="bower_components/nvd3/build/nv.d3.js"></script>
+    <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+    <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css">
+    <!-- Angular Scripts -->
+    <script src="js/module.js"></script>
+    <script src="js/controllers/homeCtrl.js"></script>
+    <script src="js/controllers/inputCtrl.js"></script>
+    <script src="js/controllers/graphCtrl.js"></script>
+    <script src="js/services/snapshotService.js"></script>
+    <script src="js/services/graphService.js"></script>
 
-  <link rel='stylesheet' href='/css/style.css'/>
-  <!-- JQuery -->
-  <script src="https://maps.googleapis.com/maps/api/js"></script>
-  <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
-
-  <!-- Angular -->
-  <script src="/bower_components/angular/angular.js"></script>
-  <!-- Ui-Router -->
-  <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="/bower_components/angularjs-slider/dist/rzslider.js"></script>
-  <!-- D3 Libs -->
-  <script src="bower_components/d3/d3.js"></script>
-  <script src="bower_components/nvd3/build/nv.d3.js"></script>
-  <script src="bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
-  <link rel="stylesheet" href="bower_components/nvd3/build/nv.d3.css">
-  <!-- Angular Scripts -->
-  <script src="/js/module.js"></script>
-  <script src="/js/controllers/homeCtrl.js"></script>
-  <script src="/js/controllers/inputCtrl.js"></script>
-  <script src="/js/controllers/graphCtrl.js"></script>
-  <script src="/js/services/snapshotService.js"></script>
-  <script src="/js/services/graphService.js"></script>
-  
-  <!-- Layout module -->
-  <script src="/js/layout.module.js"></script>
-  <script src="/js/directives/layoutDirective.js"></script>
+    <!-- Layout module -->
+    <script src="js/layout.module.js"></script>
+    <script src="js/directives/layoutDirective.js"></script>
 </head>
 
-<body ng-app='myApp'>
-  <ab-layout></ab-layout>
-  <ui-view></ui-view>
+<body ng-app="myApp">
+<!--<ab-layout></ab-layout>-->
+
+<div class="container">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+
+
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+            <div class="list-group">
+                <a href="#" class="list-group-item active" ui-sref="input" >How are you today?</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+                <a href="#" class="list-group-item">Link</a>
+            </div>
+        </div><!--/.sidebar-offcanvas-->
+
+        <div class="col-xs-12 col-sm-9">
+            <p class="pull-right visible-xs">
+                <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+            </p>
+            <ui-view></ui-view>
+        </div><!--/.col-xs-12.col-sm-9-->
+
+    </div><!--/row-->
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2015 Company, Inc.</p>
+    </footer>
+
+</div><!--/.container-->
+
 </body>
 
+<!--Jasny offcanvas-->
+<script src="js/offcanvas.js"></script>
 </html>
