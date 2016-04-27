@@ -2,7 +2,15 @@
   "use strict";
 
   angular
-    .module("myApp", ["ui.router", "nvd3", "rzModule"])
+    .module("myApp", [
+    
+    // Third party modules
+    "ui.router", 
+    "nvd3", 
+    "rzModule", 
+    
+    // Custom modules
+    "app.layout"])
     .constant('PRISM_SERVER', 'http://localhost:3000')
     .config(configFunction);
     // .config(mapsConsfig)
