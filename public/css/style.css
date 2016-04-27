@@ -13,6 +13,11 @@ h3 {
 }
 #map {
   height: 300px;
+  margin-bottom: 40px;
+}
+.list-group-item {
+  background-color: rgba(255,255,255, 0.5);
+  border-color: #7e7e7e;
 }
 
 .btn {

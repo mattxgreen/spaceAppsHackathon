@@ -32,6 +32,8 @@
     <script src="js/controllers/homeCtrl.js"></script>
     <script src="js/controllers/inputCtrl.js"></script>
     <script src="js/controllers/graphCtrl.js"></script>
+    <script src="js/controllers/mapCtrl.js"></script>
+    <script src="js/controllers/globeCtrl.js"></script>
     <script src="js/services/snapshotService.js"></script>
     <script src="js/services/graphService.js"></script>
 
@@ -43,45 +45,42 @@
 <body ng-app="myApp">
 <!--<ab-layout></ab-layout>-->
 
+<!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
+  <!--Launch demo modal-->
+<!--</button>-->
+
+<!-- Modal -->
+
+      <ab-layout></ab-layout>
+
+
 <div class="container">
-
     <div class="row row-offcanvas row-offcanvas-right">
-
-
         <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
             <div class="list-group">
-                <a href="#" class="list-group-item active" ui-sref="input" >How are you today?</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
-                <a href="#" class="list-group-item">Link</a>
+                <a class="list-group-item active" data-toggle="modal" data-target="#myModal">Submit Symptoms</a>
+                <a href="#" class="list-group-item" ui-sref="graph">Your Personal Data</a>
+                <a href="#" class="list-group-item" ui-sref="map">Aerosols Map</a>
+                <a href="#" class="list-group-item" ui-sref="globe">Historical AQI Globe</a>
             </div>
         </div><!--/.sidebar-offcanvas-->
-
         <div class="col-xs-12 col-sm-9">
             <p class="pull-right visible-xs">
                 <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
             </p>
+
             <ui-view></ui-view>
         </div><!--/.col-xs-12.col-sm-9-->
-
     </div><!--/row-->
 
     <hr>
-
     <footer>
-        <p>&copy; 2015 Company, Inc.</p>
+        <p>&copy; 2016 The Back-Corner Team</p>
     </footer>
-
 </div><!--/.container-->
-
 </body>
 
 <!--Jasny offcanvas-->
-<script src="js/offcanvas.js"></script>
+<script src="assets/offcanvas.js"></script>
 </html>
