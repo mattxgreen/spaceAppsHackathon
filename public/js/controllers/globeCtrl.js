@@ -8,7 +8,7 @@
         .module('myApp')
         .controller('globeCtrl',globeCtrl);
 
-    globeCtrl.$inject = [''];
+    // globeCtrl.$inject = [''];
 
     function globeCtrl () {
         
