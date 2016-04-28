@@ -59,7 +59,6 @@
       	                    globe.createPoints();
       	                    settime(globe,0)();
       	                    globe.animate();
-      	                    document.body.style.backgroundColor = 'red'; // remove loading
       	                }
       	            }
       	        };

@@ -6,6 +6,7 @@ body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   background-image: url('/images/citybackground.jpg');
   background-repeat: no-repeat;
+
 }
 h3 {
   margin: 10px;
@@ -61,15 +62,15 @@ border-radius: 5px;
 
 
 
-.globe {
-    margin: 0;
-    padding: 0;
-    background: #000000 url('../images/loading.gif') center center no-repeat;
-    color: #ffffff;
-    font-size: 13px;
-    line-height: 20px;
-    height: 100%;
+
+#globe_spacer{
+  min-height: 700px;
 }
+
+canvas {
+  border-radius: .35em;
+}
+
 #info {
     font-size: 11px;
     position: absolute;
@@ -88,27 +89,19 @@ border-radius: 5px;
     border-top: 1px solid rgba(255,255,255,0.4);
     padding: 10px;
 }
-.globe a {
-    color: #aaa;
-    text-decoration: none;
-}
-.globe a:hover {
-    text-decoration: underline;
-}
-.bull {
-    padding: 0 5px;
-    color: #555;
-}
+
 #title {
     position: absolute;
     top: 20px;
     width: 270px;
     left: 20px;
-    /*background-color: rgba(0,0,0,0.2);*/
+    background-color: rgba(0,0,0,0.2);
     border-radius: 3px;
     font: 25px ;
     padding: 10px;
+    color: ghostwhite;
 }
+
 .year {
     font: 16px;
     line-height: 26px;
@@ -123,16 +116,4 @@ border-radius: 5px;
 .year:hover, .year.active {
     font-size: 18px;
     color: #fff;
-}
-.globe #ce span {
-    display: none;
-}
-.globe #ce {
-    width: 107px;
-    height: 55px;
-    display: block;
-    position: absolute;
-    bottom: 15px;
-    left: 20px;
-    background: url('../images/ce.png');
 }
