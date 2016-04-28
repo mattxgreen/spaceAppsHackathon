@@ -206,9 +206,6 @@
                             else{
                                 console.log("Found undefinded");
                             }
-
-
-
                         },
                         function(error){
                             alert("Failure: "+error);
@@ -216,17 +213,12 @@
                         USCities[i].latitude,
                         USCities[i].longitude
                 );
-
             }
-
-
             setTimeout(function(){
                 text =JSON.stringify(JSONdata);
                 document.write('<p id="test">'+text+'</p>');
             },5000);
-
             console.log(JSONdata);
-
         }
 
 
