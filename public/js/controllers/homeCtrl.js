@@ -5,9 +5,9 @@
     .module("myApp")
     .controller("homeCtrl", homeCtrl);
 
-  homeCtrl.$inject = ['$scope', 'SnapshotService', '$window', 'GraphService'];
+  homeCtrl.$inject = ['$scope', 'SnapshotService', '$window', 'GraphService','PRISM_SERVER'];
 
-  function homeCtrl($scope, SnapshotService, $window, GraphService) {
+  function homeCtrl($scope, SnapshotService, $window, GraphService,PRISM_SERVER) {
     var vm = this;
 
     $window.map = new google.maps.Map(document.getElementById('map'), {
@@ -41,9 +41,9 @@
 
 
       var request = $.ajax({
-        url: 'https://7d298d1b.ngrok.io/api/all', //this route needs to return a json string with a objects that have 'latitude'
+        url: PRISM_SERVER+'/api/all', //this route needs to return a json string with a objects that have 'latitude'
                            //and 'longitude' properties. It's okay if they have other irrelevant properties.
-        type: 'GET',
+        type: 'GET'
         // datatype: 'json'
       });
 

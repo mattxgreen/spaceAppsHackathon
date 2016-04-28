@@ -1,14 +1,10 @@
 (function() {
   "use strict";
-
   angular
     .module("myApp")
     .factory("SnapshotService", SnapshotService);
-
-    SnapshotService.$inject = ['$http','PRISM_SERVER'];
-
-    function SnapshotService ($http, PRISM_SERVER) {
-
+    SnapshotService.$inject = ['PRISM_SERVER'];
+    function SnapshotService (PRISM_SERVER) {
 			var service = {
 				send: send,
 				getAll: getAll
