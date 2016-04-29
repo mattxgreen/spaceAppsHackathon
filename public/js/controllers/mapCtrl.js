@@ -19,7 +19,7 @@
 
     var getTileUrl = function(tile, zoom) {
       return "//map1.vis.earthdata.nasa.gov/wmts-webmerc/" +
-             "MODIS_Terra_Aerosol/default/2013-12-02/" +
+             "MODIS_Terra_Aerosol/default/2016-04-27/" +
              "GoogleMapsCompatible_Level6/" +
               zoom + "/" + tile.y + "/" +
               tile.x + ".png";
