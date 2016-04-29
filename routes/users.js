@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var User = require("../models/user")
+var Twitter = require('twitter');
 
 
 //Get all users

@@ -1,6 +1,7 @@
 "use strict";
 
 var mongoose = require('mongoose');
+var Twitter = require('twitter');
 
 var Snapshot;
 

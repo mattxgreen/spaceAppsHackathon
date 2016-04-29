@@ -7,6 +7,7 @@ var http = require('http');
 var request = require('request');
 var urlBase = 'http://www.airnowapi.org/aq/observation/latLong/current/?format=application/json';
 var dist = '&distance=25&API_KEY=' + process.env.API_KEY;
+var Twitter = require('twitter');
 
 router.get('/', function(req, res, next) {
   console.log('api call working');
