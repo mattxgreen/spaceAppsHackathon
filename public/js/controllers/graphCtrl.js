@@ -24,13 +24,13 @@
           //},
             duration: 350,
             xAxis: {
-                axisLabel: 'X Axis',
+                axisLabel: 'Symptom Intensity',
                 tickFormat: function(d){
                     return d3.format('.02f')(d);
                 }
             },
             yAxis: {
-                axisLabel: 'Y Axis',
+                axisLabel: 'Reported Cases',
                 tickFormat: function(d){
                     return d3.format('.02f')(d);
                 },

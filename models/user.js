@@ -3,6 +3,7 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
 var jwt = require('jwt-simple');
+var Twitter = require('twitter');
 
 const JWT_SECRET = 'secret';
 

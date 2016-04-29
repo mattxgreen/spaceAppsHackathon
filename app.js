@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+var Twitter = require('twitter');
 
 const mongoUrl = process.env.MONGOLAB_URI || 'mongodb://localhost/spaceapps';
 mongoose.connect(mongoUrl, function(err) {
